@@ -17,17 +17,18 @@ public class Animal : MonoBehaviour
         }
     }
 
-    // encapsulation (only visible for children) + polymorphism
-    protected void MakeNoise()
-    {  
-        Debug.Log($"{name}: {noise}");
+   
+    public string MakeNoise()
+    {
+        return $"{noise}";
     }
-    protected void MakeNoise(string n)  // overloading
-    {  
+    public void MakeNoise(string n)  // overloading
+    {
+        noise = n;
         Debug.Log($"{name}: {noise}");
     }
 
-    public virtual void Reproduction() { }  // polymorphism
+    public virtual string Reproduction() { return "";  }  // polymorphism
 
 
 }

@@ -9,12 +9,14 @@ public class Cat : Animal
     void Start()
     {
         Noise = "meow!";
-        MakeNoise(Noise);
-        Reproduction();
+        //MakeNoise();
+        //MakeNoise(Noise);
+        //Reproduction();
     }
 
-    public override void Reproduction()
+    public override string Reproduction()
     {
-        Debug.Log($"{name}: I give birth to kitten <3");
+        //Debug.Log($"{name}: I give birth to kitten <3");
+        return "<3 I give birth to kitten <3";
     }
 }
